@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build-docker-image') {
             steps {
-                echo "Running UI tests on xx environment"
+                echo "Running UI tests on ${params.ENVIRONMENT} environment"
             }
         }
     }
