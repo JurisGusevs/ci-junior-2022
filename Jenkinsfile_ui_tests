@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'ENVIRONMENT', defaultValue: 'DEV', description: 'Target environment for test exacution')
+    }
+    triggers { 
+        pollSCM('*/1 * * * *')
+    }
+    stages {
+        stage('build-docker-image') {
+            steps {
+                echo "Running UI tests on xx environment"
+            }
+        }
+    }
+}
